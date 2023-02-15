@@ -21,13 +21,14 @@ jobs:
     services: 
       database: 
         image: couchbase
+        ports: 
+          - 8091:8091
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo hello
     - run: npm run load:scripts
     - run: npm run load:db
 
