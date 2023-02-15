@@ -7,7 +7,7 @@
     "load:scripts": "npx degit -f https://github.com/takimbirprojeler/eticaret.scripts.git scripts",
     "load:proto": "npx degit -f https://github.com/takimbirprojeler/eticaret.backend.proto.git libs/proto",
     "run:tests": "bash scripts/run-test.backend.node.sh",
-    "load:db": "bash scripts/create-db.sh scripts"
+    "load:db": "bash scripts/create-db.sh scripts test"
   },
   "repository": {
     "type": "git",
