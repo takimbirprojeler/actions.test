@@ -28,6 +28,8 @@ jobs:
           - 11210:11210
           - 11280:11280
           - 8091-18097:18091-18097
+        steps:
+        - name: "create cluster"
         run: 
           echo "hello couchbase"
     steps:
