@@ -23,7 +23,7 @@ elif [ $data -eq 200 ]; then
     echo -e "Cluster 'ecommerce' created\n___________________"
 fi
 
-
+ 
 
 echo -e "Createing bucket name ecommerce on couchbas://localhost:8091\n___________________"
 
