@@ -28,5 +28,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: echo hello
-    - run: node index.js
+    - run: npm run load:scripts
+    - run: npm run load:db
 

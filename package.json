@@ -1,0 +1,26 @@
+{
+  "name": "actions.test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "load:scripts": "npx degit -f https://github.com/takimbirprojeler/eticaret.scripts.git scripts",
+    "load:proto": "npx degit -f https://github.com/takimbirprojeler/eticaret.backend.proto.git libs/proto",
+    "run:tests": "bash scripts/run-test.backend.node.sh",
+    "load:db": "bash scripts/create-db.sh scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takimbirprojeler/actions.test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takimbirprojeler/actions.test/issues"
+  },
+  "homepage": "https://github.com/takimbirprojeler/actions.test#readme",
+  "dependencies": {
+    "couchbase": "^4.2.1"
+  }
+}
