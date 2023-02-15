@@ -28,12 +28,7 @@ jobs:
           - 11210:11210
           - 11280:11280
           - 8091-18097:18091-18097
-        jobs: 
-          create:
-            steps:
-            - name: "create cluster"
-            run: 
-              echo "hello couchbase"
+       
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
