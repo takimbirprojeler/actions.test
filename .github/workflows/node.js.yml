@@ -21,14 +21,6 @@ jobs:
     services: 
       database: 
         image: couchbase
-        ports:
-          - 8091:8091
-          - 9123:9123
-          - 11207:11207
-          - 11210:11210
-          - 11280:11280
-          - 8091:18091
-       
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
