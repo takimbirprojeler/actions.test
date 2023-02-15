@@ -5,6 +5,26 @@ if [ ! -x "$(which curl)" ]; then
     exit 0
 fi
 
+
+echo -e "Creating cluster"
+
+data=$(curl -s -i -o response.txt   -w "%{http_code}" -X POST http://127.0.0.1:8091/clusterInit \
+  -d services=kv,n1ql \
+  -d username=administrator  \
+  -d password=administrator \
+  -d port=SAME \
+  -d clusterName=ecommerce)
+
+rm response.txt 
+
+if [ $data -eq 400 ]; then
+    echo -e "Cluster 'ecommerce' already exist\nSkipping creating bucket\n___________________"
+elif [ $data -eq 200 ]; then
+    echo -e "Cluster 'ecommerce' created\n___________________"
+fi
+
+
+
 echo -e "Createing bucket name ecommerce on couchbas://localhost:8091\n___________________"
 
 data=$(curl -s -i -o response.txt   -w "%{http_code}"  -X POST http://localhost:8091/pools/default/buckets \

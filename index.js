@@ -9,4 +9,4 @@ const { connect, PasswordAuthenticator } = require("couchbase")
 
 
         console.log("cluster" ,cluster)
-    })()
+    })() 
