@@ -27,8 +27,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install
     - run: echo hello
-    - run: yarn node index.js
+    - run: node index.js
 
