@@ -22,7 +22,7 @@ jobs:
       database: 
         image: couchbase
         ports: 
-          - 8091:8091
+          - 8091:8091 
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
